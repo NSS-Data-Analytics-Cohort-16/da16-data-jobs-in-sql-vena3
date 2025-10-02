@@ -102,8 +102,9 @@ AND title not ilike '%Analytics%'
 select title
 from data_analyst_jobs
 
-select domain, title, days_since_posting
+select domain, title, days_since_posting, skill
 from data_analyst_jobs
 where days_since_posting> 21
 AND domain IS NOT NULL
+AND skill LIKE '%SQL%' 
 order by days_since_posting  DESC
